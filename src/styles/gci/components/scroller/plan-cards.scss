@@ -1,0 +1,259 @@
+.gci-scroller {
+  
+  &.plan-cards {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    @media screen and (min-width: 992px) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+    // #00a5e0 - GlacierBlue
+    &.hat {
+      .container {
+        //padding-bottom: 0;
+        @media screen and (min-width: 992px) {
+          padding-top: 74px;
+          padding-bottom: 32px;
+        }
+        .row.mobile-scroll-wrapper {
+          .sc-slide-callout {
+            position: absolute;
+            top: -42px !important;
+            padding: 0 !important;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+            display: flex !important;
+            background: #B71234 !important;
+            color: white !important;
+            height: 42px !important;
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            right: 0;
+            &.red-gradient-bg {
+              background: linear-gradient(270deg, #D18100 0%, #B71234 100%) !important;
+              color: white !important;
+            }
+            &.bg-glacierblue {
+              background: #00a9e0 !important;
+              color: white !important;
+            }
+            &.text-danger {
+              color: #B71234 !important;
+            }
+            &.text-white {
+              color: #B71234 !important;
+            }
+            &.text-midnightblue {
+              color: #272e44 !important;
+            }
+            &.text-almostblack {
+              background-color: #312E3B !important;
+            }
+            &.text-black {
+              color: #312E3B !important;
+            }
+            &.red-bg {
+              background: #B71234 !important;
+            }
+            &.bg-white {
+              background: #B71234 !important;
+            }
+            
+            &.bg-lightblue {
+              background-color: #F2F5FA !important;
+            }
+            &.bg-midnightblue {
+              background-color: #042046;
+            }
+            &.bg-almostblack {
+              background-color: #312E3B;
+            }
+          }
+          .slick-dots {
+            top: 64px;
+            height: 30px;
+          }
+          .slick-next, .slick-prev {
+            top: 78px;
+          }
+          .slick-next {
+            height: 20px;
+          }
+        }
+      }
+      .content-block {
+        @media screen and (max-width: 991px) {
+          margin-top: 42px;
+        }
+      }
+    }
+
+    .container {
+      @media screen and (max-width: 767px) {
+        padding-bottom: 0;
+      }
+      padding-top: 32px;
+      padding-bottom:24px;
+      
+      .row div[class*=col-] {
+        padding: 0 15px;
+        &:first-child {
+          padding-left: 10px;
+        }
+        &:last-child {
+          padding-right: 10px;
+        }
+      }
+    }
+    .slick-list {
+      // padding-left: 0 !important;
+    }
+    .sc-title, h2 {
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 8px;
+      @media screen and (min-width: 992px) {
+      margin-bottom: 16px;
+      }
+    }
+    .sc-subtitle {
+      font-size: 18px;
+      line-height: 24px;
+      color: white;
+      text-transform: unset;
+      font-weight: normal;
+      letter-spacing: unset;
+      word-spacing: unset;
+      margin-bottom: 0;
+    }
+
+    .mobile-scroll-wrapper {
+      .content-block {
+        position:relative;
+
+        details {
+          position: relative;
+          padding-bottom: 24px;
+        }
+        details[open] {
+          padding-bottom: 0;
+          summary {
+            margin-bottom: 24px;
+          }
+          .sc-slide-description {
+            margin-bottom: 32px;
+            p {
+              font-size: 18px;
+              line-height: 24px;
+              font-weight: 400;
+            }
+          }
+        }
+        summary {
+          display: inline-block;
+          color: #312E3B;
+          font-family: "Gotham";
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 18px;
+          margin: 0;
+          list-style-type: none;
+          border-bottom: 1px solid #312e3b;
+          &:hover {
+            border-bottom: 1px solid transparent;
+          }
+        }
+        details > summary::marker {
+          display: none 
+        }
+        details > summary::-webkit-details-marker {
+          display: none 
+        }
+        .sc-slide-title, h3 {
+          color: unset;
+          text-transform: unset;
+          font-weight: unset;
+          letter-spacing: unset;
+          word-spacing: unset;
+          font-family: "Gotham";
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 42px;
+          margin-bottom: 8px;
+        }
+        .sc-slide-description {
+          margin-bottom: 8px;
+          p {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 500;
+          }
+        }
+        .slide-info {
+          .sc-slide-title {
+            @media screen and (min-width: 992px) {
+              min-height: 84px;
+            }
+          }
+          .sc-slide-description {
+            text-transform: uppercase;
+            @media screen and (min-width: 992px) {
+              min-height: 72px;
+            }
+          }
+          .sc-slide-subtitle {
+            margin-bottom: 12px;
+            p {
+              font-family: "Gotham";
+              font-size: 14px;
+              line-height: 20px;
+              font-weight: normal;
+              margin-bottom: 0;
+            }
+          }
+        }
+        
+        .highlight-blue {
+          line-height:32px;
+        }
+        .cta {
+          border-top: 1px solid #BBBDC0;
+          padding-top: 18px;
+        }
+      }
+      .featured-item {
+        &.red-bg {
+          summary {
+            color: white;
+            border-bottom: 1px solid white;
+          }
+          .small-button {
+            background: white;
+            color: #B71234;
+            &:hover {
+              background: #B71234;
+              color: white;
+              border: 1px solid white;
+            }
+          }
+          .cta {
+            border-top: 1px solid #850D25;
+            padding-top: 18px;
+          }
+        }
+      }
+    }
+    .body-content {
+      h4 {
+        line-height: 24px;
+        @media screen and (min-width: 992px) {
+          line-height: 40px;
+          margin-bottom: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["after-same-name", "first-nested"],
+        "ignore": ["after-comment"],
+        "ignoreAtRules": ["else", "layer"]
+      }
+    ],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["tailwind", "apply", "layer", "screen", "variants"]
+      }
+    ],
+    "block-closing-brace-newline-after": [
+      "always",
+      {
+        "ignoreAtRules": ["if", "else"]
+      }
+    ],
+    "block-no-empty": [
+      true,
+      {
+        "ignore": ["comments"]
+      }
+    ],
+    "color-hex-length": "long",
+    "color-named": "never",
+    "comment-no-empty": true,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-redundant-longhand-properties": true,
+    "declaration-block-no-shorthand-property-overrides": true,
+    "declaration-no-important": null,
+    "function-parentheses-space-inside": "never-single-line",
+    "import-notation": "string",
+    "length-zero-no-unit": true,
+    "no-duplicate-selectors": true,
+    "no-eol-whitespace": true,
+    "no-extra-semicolons": true,
+    "number-max-precision": 2,
+    "order/properties-alphabetical-order": true,
+    "selector-class-pattern": "^[a-z_-]+",
+    "selector-max-compound-selectors": 2,
+    "selector-pseudo-element-colon-notation": "single"
+  }
+}

@@ -1,0 +1,207 @@
+@media (max-width: 1200px) {
+  .theme-gcib .main-feature.enhanced .feature-bg {
+      opacity: 0 !important;
+      width: 100%;
+  }
+}
+.theme-gcib {
+  .main-feature {
+    &.enhanced {
+      //border-bottom: 1px solid white;
+      &.bg-white {
+        background: white;
+        .main-feature-wrap {
+          background-image: none !important;
+          picture {
+            display: none;
+          }
+          .hero-teaser .h1 {
+            color: #312E3B;
+          }
+          .btn-primary {
+            background: #B71234;
+            color: white;
+          }
+          .btn-link {
+            padding: 0.4rem 0;
+            font-weight: bold;
+            color: #312E3B;
+            text-decoration: underline;
+          }
+        }
+      }
+      &.bg-lightblue {
+        background: #F2F5FA !important;
+        .main-feature-wrap {
+          background-image: none !important;
+          picture {
+            display: none;
+          }
+          .hero-teaser .h1 {
+            color: #312E3B;
+          }
+          .btn-primary {
+            background: #B71234;
+            color: white;
+          }
+          .btn-link {
+            padding: 0.4rem 0;
+            font-weight: bold;
+            color: #312E3B;
+            text-decoration: underline;
+          }
+        }
+      }
+      &.red-bg {
+        background: #b71234;
+        .main-feature-wrap {
+          background-image: none !important;
+          picture {
+            display: none;
+          }
+          .hero-teaser .h1 {
+            color: white;
+          }
+        }
+      }
+      &.bg-midnightblue {
+        background: #042046 !important;
+        .main-feature-wrap {
+          background-image: none !important;
+          picture {
+            display: none;
+          }
+          .hero-teaser .h1 {
+            color: white;
+          }
+        }
+      }
+      &.bg-almostblack {
+        background: #312E3B !important;
+        .main-feature-wrap {
+          background-image: none !important;
+          picture {
+            display: none;
+          }
+          .hero-teaser .h1 {
+            color: white;
+          }
+        }
+      }
+      .main-feature-wrap {
+        min-height: 360px;
+        height: 360px;
+        @media (max-width: 576px) {
+          min-height: 435px;
+          height: 435px;
+        }
+      }
+      .feature-bg {
+        min-height: unset;
+      }
+      .body-container {
+        display: grid;
+        @media (max-width: 767px) {
+          padding: 0 40px;
+        }
+        @media (min-width: 576px) {
+          grid-template-columns: 50% 1fr;
+          column-gap: 20px;
+        }
+        @media (min-width: 1200px) {
+          grid-template-columns: 55% 1fr;
+        }
+        @media (min-width: 1400px) {
+          grid-template-columns: 50% 1fr;
+          column-gap: 40px;
+        }
+        align-items: center;
+      }
+      .hero-image {
+        @media (max-width: 575px) {
+          order: 1;
+          display: grid;
+          justify-self: center;
+          padding: 18px 0 0;
+          img {
+            max-height: 156px;
+          }
+        }
+        img {
+          @media (max-width: 1400px) {
+          width: 100%;
+          }
+        }
+      }
+      .hero-teaser {
+        h1 {
+          margin-bottom: 1rem;
+        }
+        @media (max-width: 575px) {
+          order: 2;
+        }
+      }
+      .body-copy {
+        margin-bottom: 1rem;
+        color: white;
+        font-family: "Gotham";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+      .cta-container {
+        margin-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 16px;
+        column-gap: 24px;
+        justify-content: center;
+        @media (min-width: 576px) {
+          justify-content: unset;
+          grid-template-columns: 50% 50%;
+          column-gap: 36px;
+        }
+
+        .btn {
+          padding: 0.4rem 27px;
+        }
+        .btn-primary {
+          background: white;
+          color: #B71234;
+          &:hover {
+            background: #B71234;
+            color: white;
+            border: 1px solid white;
+          }
+        }
+        .btn-link {
+          padding: 0.4rem 0;
+          font-weight: bold;
+          color: white;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      
+        .hero-teaser .h1 {
+          color: white;
+          margin-bottom: 0;
+          @media (max-width: 767px) {
+            font-size: 36px;
+            line-height: 40px;
+          }
+          @media (min-width: 768px) {
+            font-size: 48px;
+            line-height: 58px;
+          }
+          @media (min-width: 1200px) {
+            font-size: 48px;
+            line-height: 58px;
+          }
+        }
+    }
+  }
+}

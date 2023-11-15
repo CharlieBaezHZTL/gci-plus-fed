@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "clean": "rm -rf public/*",
+    "watch:11ty": "eleventy --serve",
+    "watch:sass": "sass --watch src/styles:public/styles --no-source-map --style=compressed",
+    "start": "npm run watch:sass & npm run watch:11ty",
+    "build:11ty": "eleventy",
+    "build:sass": "sass src/styles:public/styles --no-source-map --style=compressed",
+    "build": "npm run build:sass; npm run build:11ty"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "hjson": "^3.2.2",
+    "html-minifier": "^4.0.0",
+    "normalize-css": "^2.3.1",
+    "sass": "^1.57.1"
+  }
+}
