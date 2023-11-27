@@ -1,0 +1,123 @@
+$almostBlack: #312E3B;
+
+.bg-scale-light {
+  background-color: #F2F5FA;
+}
+
+.broad-band-labels {
+  padding: 5%;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin-left: -18px;
+  margin-right: -18px;
+
+  .content-container {
+    max-width: 1260px;
+    margin: 0 auto;
+  }
+}
+
+.broad-band-scroll-wrapper {
+  width: 100%;
+  // max-width: 1440px;
+  // margin-left: auto;
+  // margin-right: auto;
+  &.slick-slider {
+    .slick-slide {
+      font-size: inherit;
+  }
+    .slick-list {
+      width: 100%;
+    }
+    .slick-track {
+      display: flex;
+    }
+    .slick-track > * + * {
+      margin-left: 8px;
+    }
+
+    .slick-prev, .slick-next,.slick-dots {
+      position: relative;
+      top: unset;
+      bottom: unset;
+      right: unset;
+      left: unset;
+      visibility: hidden;
+      &:after, &:before {
+        content:none;
+      }
+    }
+
+    .slick-prev, .slick-next {
+      transform: none;
+    }
+
+    .slick-dots {
+      display: flex;
+      width: auto;
+      margin: 0 48px;
+      li {
+        width: auto;
+        height: auto;
+        &.slick-active button {
+          background-color: $almostBlack;
+        }
+      }
+    }
+
+    .slick-navigation {
+      padding: 30px 0;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      .slick-prev, .slick-next, .slick-dots {
+        visibility: visible;
+      }
+    }
+  }
+  .broad-band-card {
+    padding: 4px;
+    background-color: white;
+    .content-container {
+      padding: 16px;
+      border: solid $almostBlack 4px;
+      
+      .bb-card-title {
+        color: $almostBlack;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        letter-spacing: -0.42px;
+        text-transform: none;
+      }  
+      .bb-card-subtitle {
+        color: $almostBlack;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.225px;
+        text-transform: none;
+        margin-bottom: 5px;
+        > p{
+          font-weight: 600;
+        }
+      } 
+      .bb-card-section-title {
+        font-size: 15px;
+        margin-bottom: 5px;
+      } 
+      p {
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+      ul {
+        list-style: none;
+        padding-inline-start: 0;
+      }
+    }
+
+  }
+}
