@@ -38,21 +38,32 @@ $(document).ready(function () {
     const summary = details.querySelector('.plan-cards.gci-scroller summary');
     summary.addEventListener('click', toggleAllDetails);
   });
+  
+  /* ====
+    BROAD BAND LABEL CAROUSEL
+  ==== */
+
   $('.broad-band-scroll-wrapper')
   .slick({
-    arrows: true,
     slidesToShow: 4,
     slidesToScroll: 4,
     infinite: false,
     centerMode: false,
     focusOnSelect: true,
+    arrows: true,
     dots: true,
+    appendArrows: $('.slick-navigation'),
+    appendDots: $('.slick-navigation span'),
+    prevArrow: '<button type="button" class="slick-prev"><svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5161 3.88L4.48389 10L10.5161 16.12" stroke="#312E3B" stroke-width="5" stroke-linecap="square"/></svg></button>',
+    nextArrow: '<button type="button" class="slick-prev"><svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.48386 16.12L10.5161 10L4.48385 3.88" stroke="#312E3B" stroke-width="5" stroke-linecap="square"/></svg></button>',
     responsive: [
       {
         breakpoint: 1025,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          arrows: true,
+          dots: true,
         }
       },
       {
@@ -60,23 +71,10 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: true,
+          dots: true,
         }
       }
     ]
   })
-  setTimeout(() => {
-    const prev = $('.slick-prev')
-    const dots = $('.slick-dots')
-    const next = $('.slick-next')
-
-    prev.detach()
-    dots.detach()
-    next.detach()
-    $('<div class="slick-navigation"></div>').insertBefore('.slick-list')
-    $('.slick-navigation').append(prev)
-    $('.slick-navigation').append(dots)
-    $('.slick-navigation').append(next)
-    prev[0].innerHTML = '<svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5161 3.88L4.48389 10L10.5161 16.12" stroke="#312E3B" stroke-width="5" stroke-linecap="square"/></svg>';
-    next[0].innerHTML = '<svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.48386 16.12L10.5161 10L4.48385 3.88" stroke="#312E3B" stroke-width="5" stroke-linecap="square"/></svg>';
-  }, 500);
 });

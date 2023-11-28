@@ -1,4 +1,27 @@
 $almostBlack: #312E3B;
+$gciRed: #B71234;
+$xxs: 1px;
+$xs: 2px;
+$sm: 4px;
+$md: 8px;
+$ml: 12px;
+$lg: 16px;
+$lgr: 18px;
+$xl: 24px;
+$x2l: 28px;
+$x3l: 30px;
+$x4l: 40px;
+$x5l: 48px;
+$fontRegular: "Gotham", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontMedium: "Gotham Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontBold: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$textXs: 12px;
+$textSm: 13px;
+$textMd: 15px;
+$textMl: $lg;
+$textLg: $lgr;
+$textXL: $x2l;
+
 
 .bg-scale-light {
   background-color: #F2F5FA;
@@ -8,33 +31,19 @@ $almostBlack: #312E3B;
   padding: 5%;
   padding-top: 70px;
   padding-bottom: 70px;
-  margin-left: -18px;
-  margin-right: -18px;
+  margin-left: -$lgr;
+  margin-right: -$lgr;
 
   .content-container {
     max-width: 1260px;
     margin: 0 auto;
   }
-}
-
-.broad-band-scroll-wrapper {
-  width: 100%;
-  // max-width: 1440px;
-  // margin-left: auto;
-  // margin-right: auto;
-  &.slick-slider {
-    .slick-slide {
-      font-size: inherit;
-  }
-    .slick-list {
-      width: 100%;
-    }
-    .slick-track {
-      display: flex;
-    }
-    .slick-track > * + * {
-      margin-left: 8px;
-    }
+  .slick-navigation {
+    padding: $x3l 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 
     .slick-prev, .slick-next,.slick-dots {
       position: relative;
@@ -42,7 +51,6 @@ $almostBlack: #312E3B;
       bottom: unset;
       right: unset;
       left: unset;
-      visibility: hidden;
       &:after, &:before {
         content:none;
       }
@@ -55,67 +63,167 @@ $almostBlack: #312E3B;
     .slick-dots {
       display: flex;
       width: auto;
-      margin: 0 48px;
+      margin: 0 $xl;
+      @media screen and (min-width: 768px) {
+        margin: 0 $x4l;
+      }
       li {
         width: auto;
         height: auto;
+        margin: 0 $sm;
+
         &.slick-active button {
           background-color: $almostBlack;
         }
       }
     }
+  }
+  .sc-legal {
+    margin-top: 40px;
+    a {
+      color: inherit;
+      font-family: $fontMedium;
+      text-decoration: underline;
+    }
+  }
+}
 
-    .slick-navigation {
-      padding: 30px 0;
-      display: flex;
+.broad-band-scroll-wrapper {
+  width: 100%;
+  &.slick-slider {
+    .slick-slide {
+      font-size: inherit;
+  }
+    .slick-list {
       width: 100%;
-      align-items: center;
-      justify-content: center;
-      .slick-prev, .slick-next, .slick-dots {
-        visibility: visible;
+      overflow: visible;
+      @media screen and (min-width: 768px) {
+        overflow: hidden;
       }
+    }
+    .slick-track {
+      display: flex;
+    }
+    .slick-track > * + * {
+      margin-left: $md;
     }
   }
   .broad-band-card {
-    padding: 4px;
+    padding: $sm;
     background-color: white;
     .content-container {
-      padding: 16px;
-      border: solid $almostBlack 4px;
+      padding: $ml;
+      border: solid $almostBlack $sm;
       
       .bb-card-title {
         color: $almostBlack;
-        font-size: 28px;
+        font-size: $textXL;
         font-style: normal;
-        font-weight: 900;
+        font-family: $fontBold;
         line-height: normal;
         letter-spacing: -0.42px;
         text-transform: none;
       }  
       .bb-card-subtitle {
         color: $almostBlack;
-        font-size: 16px;
+        font-size: $textMl;
         font-style: normal;
-        font-weight: 700;
+        font-family: $fontBold;
         line-height: normal;
         letter-spacing: -0.225px;
         text-transform: none;
-        margin-bottom: 5px;
+        margin-bottom: $sm;
         > p{
-          font-weight: 600;
+          font-family: $fontMedium;
         }
       } 
       .bb-card-section-title {
-        font-size: 15px;
-        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        font-size: $textMd;
+        margin-bottom: $sm;
+        > .label-list-item-value {
+          font-family: $fontBold;
+          font-weight: bold;
+        }
+        .title-tag {
+          font-size: $textSm;
+        }
       } 
       p {
-        font-size: 13px;
-        margin-bottom: 5px;
+        font-size: $textSm;
+        margin-bottom: $sm;
       }
-      ul {
+      ul.label-list {
         list-style: none;
-        padding-inline-start: 0;
+        padding-inline-start: $lg;
+        margin-bottom: $lg;
+        font-family: $fontMedium;
+        li.label-list-item {
+          display: flex;
+          flex-direction: column;
+          margin: 0;
+          letter-spacing: -0.195px;
+          p.label-list-item-title {
+            margin-bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            .label-list-item-value {
+              font-family: $fontBold;
+              white-space: pre;
+            }
+          }
+          p.label-list-item-detail{
+            display: flex;
+            margin-left: $xl;
+            margin-bottom: 0;
+            .label-list-item-value {
+              font-family: $fontBold;
+              white-space: pre;
+            }
+          }
+        }
+      }
+      .font-md {
+        font-family: $fontMedium;
+      }
+      a {
+        color: $gciRed;
+        white-space: pre;
+        box-shadow: 0 $xxs 0 0 $gciRed;
+        display: inline-block;
+        line-height: .85;
+        font-family: $fontMedium;
+        font-size: $textSm;
+        &:hover {
+          color: $almostBlack;
+        }
+      }
+      h4 + h4 {
+        margin-top: 8px;
+      }
+      hr {
+        margin-top: $ml;
+        margin-bottom: $ml;
+        &.divide-sm{
+          border-top: solid $xxs $almostBlack;
+        }
+        &.divide-md{
+          border-top: solid $xs $almostBlack;
+        }
+        &.divide-lg{
+          border-top: solid $sm $almostBlack;
+        }
+        &.divide-xl{
+          border-top: solid $md $almostBlack;
+        }
+        &.divide-spacer {
+          border-top: none;
+        }
+      }
+      .label-card-id{
+        font-family: $fontMedium;
+        font-size: $textXs;
       }
     }
 
