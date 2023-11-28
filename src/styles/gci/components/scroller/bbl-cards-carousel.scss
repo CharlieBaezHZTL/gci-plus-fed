@@ -89,7 +89,11 @@ $textXL: $x2l;
 }
 
 .broad-band-scroll-wrapper {
+  display: flex;
+  gap: $lg;
   width: 100%;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
   &.slick-slider {
     .slick-slide {
       font-size: inherit;
