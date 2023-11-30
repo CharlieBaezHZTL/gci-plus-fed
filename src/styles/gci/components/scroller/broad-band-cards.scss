@@ -119,7 +119,7 @@ $textXL: $x2l;
       padding: $ml;
       border: solid $almostBlack $sm;
       
-      .bb-card-title {
+      .broad-band-card-title {
         color: $almostBlack;
         font-size: $textXL;
         font-style: normal;
@@ -128,7 +128,7 @@ $textXL: $x2l;
         letter-spacing: -0.42px;
         text-transform: none;
       }  
-      .bb-card-subtitle {
+      .broad-band-card-subtitle {
         color: $almostBlack;
         font-size: $textMl;
         font-style: normal;
@@ -141,7 +141,7 @@ $textXL: $x2l;
           font-family: $fontMedium;
         }
       } 
-      .bb-card-section-title {
+      .broad-band-card-section-title {
         display: flex;
         justify-content: space-between;
         font-size: $textMd;
@@ -158,34 +158,42 @@ $textXL: $x2l;
         font-size: $textSm;
         margin-bottom: $sm;
       }
-      ul.label-list {
+      .label-list {
         list-style: none;
         padding-inline-start: $lg;
         margin-bottom: $lg;
         font-family: $fontMedium;
-        li.label-list-item {
+        font-size: $textSm;
+        .label-list{
+          margin-bottom: 0;
+        }
+        .label-list-item {
           display: flex;
           flex-direction: column;
           margin: 0;
           letter-spacing: -0.195px;
-          p.label-list-item-title {
-            margin-bottom: 0;
-            display: flex;
-            justify-content: space-between;
-            .label-list-item-value {
-              font-family: $fontBold;
-              white-space: pre;
-            }
-          }
-          p.label-list-item-detail{
-            display: flex;
-            margin-left: $xl;
-            margin-bottom: 0;
-            .label-list-item-value {
-              font-family: $fontBold;
-              white-space: pre;
-            }
-          }
+        }
+        .label-list-item-title {
+          margin-bottom: 0;
+          display: flex;
+          justify-content: space-between;
+          font-family: $fontMedium;
+          font-size: $textSm;
+        }
+        .label-list-item-value {
+          font-family: $fontBold;
+          white-space: pre;
+        }
+        .label-list-item-detail{
+          display: flex;
+          justify-content: space-between;
+          // margin-left: $xl;
+          margin-bottom: 0;
+          
+        }
+        .label-list-item-value {
+          font-family: $fontBold;
+          white-space: pre;
         }
       }
       .font-md {
