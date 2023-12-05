@@ -177,7 +177,7 @@ $textXL: $x2l;
           margin-bottom: 0;
           display: flex;
           justify-content: space-between;
-          font-family: $fontMedium;
+          font-family: $fontBold;
           font-size: $textSm;
         }
         .label-list-item-value {
@@ -187,9 +187,7 @@ $textXL: $x2l;
         .label-list-item-detail{
           display: flex;
           justify-content: space-between;
-          // margin-left: $xl;
           margin-bottom: 0;
-          
         }
         .label-list-item-value {
           font-family: $fontBold;
