@@ -112,130 +112,130 @@ $textXL: $x2l;
       margin-left: $md;
     }
   }
-  .broad-band-card {
-    padding: $sm;
-    background-color: white;
-    .content-container {
-      padding: $ml;
-      border: solid $almostBlack $sm;
-      
-      .broad-band-card-title {
-        color: $almostBlack;
-        font-size: $textXL;
-        font-style: normal;
+}
+.broad-band-card {
+  padding: $sm;
+  background-color: white;
+  .content-container {
+    padding: $ml;
+    border: solid $almostBlack $sm;
+    
+    .broad-band-card-title {
+      color: $almostBlack;
+      font-size: $textXL;
+      font-style: normal;
+      font-family: $fontBold;
+      line-height: normal;
+      letter-spacing: -0.42px;
+      text-transform: none;
+    }  
+    .broad-band-card-subtitle {
+      color: $almostBlack;
+      font-size: $textMl;
+      font-style: normal;
+      font-family: $fontBold;
+      line-height: normal;
+      letter-spacing: -0.225px;
+      text-transform: none;
+      margin-bottom: $sm;
+      > p{
+        font-family: $fontMedium;
+      }
+    } 
+    .broad-band-card-section-title {
+      display: flex;
+      justify-content: space-between;
+      font-size: $textMd;
+      margin-bottom: $sm;
+      > .label-list-item-value {
         font-family: $fontBold;
-        line-height: normal;
-        letter-spacing: -0.42px;
-        text-transform: none;
-      }  
-      .broad-band-card-subtitle {
-        color: $almostBlack;
-        font-size: $textMl;
-        font-style: normal;
-        font-family: $fontBold;
-        line-height: normal;
-        letter-spacing: -0.225px;
-        text-transform: none;
-        margin-bottom: $sm;
-        > p{
-          font-family: $fontMedium;
-        }
-      } 
-      .broad-band-card-section-title {
+        font-weight: bold;
+      }
+      .title-tag {
+        font-size: $textSm;
+      }
+    } 
+    p {
+      font-size: $textSm;
+      margin-bottom: $sm;
+    }
+    .label-list {
+      list-style: none;
+      padding-inline-start: $lg;
+      margin-bottom: $lg;
+      font-family: $fontMedium;
+      font-size: $textSm;
+      .label-list{
+        margin-bottom: 0;
+      }
+      .label-list-item {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        letter-spacing: -0.195px;
+      }
+      .label-list-item-title {
+        margin-bottom: 0;
         display: flex;
         justify-content: space-between;
-        font-size: $textMd;
-        margin-bottom: $sm;
-        > .label-list-item-value {
-          font-family: $fontBold;
-          font-weight: bold;
-        }
-        .title-tag {
-          font-size: $textSm;
-        }
-      } 
-      p {
+        font-family: $fontBold;
         font-size: $textSm;
-        margin-bottom: $sm;
       }
-      .label-list {
-        list-style: none;
-        padding-inline-start: $lg;
-        margin-bottom: $lg;
-        font-family: $fontMedium;
-        font-size: $textSm;
-        .label-list{
-          margin-bottom: 0;
-        }
-        .label-list-item {
-          display: flex;
-          flex-direction: column;
-          margin: 0;
-          letter-spacing: -0.195px;
-        }
-        .label-list-item-title {
-          margin-bottom: 0;
-          display: flex;
-          justify-content: space-between;
-          font-family: $fontBold;
-          font-size: $textSm;
-        }
-        .label-list-item-value {
-          font-family: $fontBold;
-          white-space: pre;
-        }
-        .label-list-item-detail{
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 0;
-        }
-        .label-list-item-value {
-          font-family: $fontBold;
-          white-space: pre;
-        }
-      }
-      .font-md {
-        font-family: $fontMedium;
-      }
-      a {
-        color: $gciRed;
+      .label-list-item-value {
+        font-family: $fontBold;
         white-space: pre;
-        box-shadow: 0 $xxs 0 0 $gciRed;
-        display: inline-block;
-        line-height: .85;
-        font-family: $fontMedium;
-        font-size: $textSm;
-        &:hover {
-          color: $almostBlack;
-        }
       }
-      h4 + h4 {
-        margin-top: 8px;
+      .label-list-item-detail{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
       }
-      hr {
-        margin-top: $ml;
-        margin-bottom: $ml;
-        &.divide-sm{
-          border-top: solid $xxs $almostBlack;
-        }
-        &.divide-md{
-          border-top: solid $xs $almostBlack;
-        }
-        &.divide-lg{
-          border-top: solid $sm $almostBlack;
-        }
-        &.divide-xl{
-          border-top: solid $md $almostBlack;
-        }
-        &.divide-spacer {
-          border-top: none;
-        }
-      }
-      .label-card-id{
-        font-family: $fontMedium;
-        font-size: $textXs;
+      .label-list-item-value {
+        font-family: $fontBold;
+        white-space: pre;
       }
     }
-
+    .font-md {
+      font-family: $fontMedium;
+    }
+    a {
+      color: $gciRed;
+      white-space: pre;
+      box-shadow: 0 $xxs 0 0 $gciRed;
+      display: inline-block;
+      line-height: .85;
+      font-family: $fontMedium;
+      font-size: $textSm;
+      &:hover {
+        color: $almostBlack;
+      }
+    }
+    h4 + h4 {
+      margin-top: 8px;
+    }
+    hr {
+      margin-top: $ml;
+      margin-bottom: $ml;
+      &.divide-sm{
+        border-top: solid $xxs $almostBlack;
+      }
+      &.divide-md{
+        border-top: solid $xs $almostBlack;
+      }
+      &.divide-lg{
+        border-top: solid $sm $almostBlack;
+      }
+      &.divide-xl{
+        border-top: solid $md $almostBlack;
+      }
+      &.divide-spacer {
+        border-top: none;
+      }
+    }
+    .label-card-id{
+      font-family: $fontMedium;
+      font-size: $textXs;
+    }
   }
+
 }
