@@ -135,7 +135,11 @@ $textXL: $x2l;
   &.slick-slider {
     .slick-slide {
       font-size: inherit;
-  }
+      height: auto;
+      > div {
+        height: 100%;
+      }
+    }
     .slick-list {
       width: 100%;
       overflow: visible;
@@ -154,9 +158,11 @@ $textXL: $x2l;
 .broad-band-card {
   padding: $sm;
   background-color: white;
+  height: 100%;
   .content-container {
     padding: $ml;
     border: solid $almostBlack $sm;
+    height: 100%;
     
     .broad-band-card-title {
       color: $almostBlack;
@@ -216,7 +222,7 @@ $textXL: $x2l;
         margin-bottom: 0;
         display: flex;
         justify-content: space-between;
-        font-family: $fontBold;
+        font-family: $fontMedium;
         font-size: $textSm;
       }
       .label-list-item-value {

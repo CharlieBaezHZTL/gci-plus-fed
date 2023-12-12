@@ -81,12 +81,32 @@ $(document).ready(function () {
     }
   };
 
+  /* ====
+    BROAD BAND LABEL Header Height
+  ==== */
+  const labelHeaderMatch = () => {
+    const $sections = $('.broad-band-card-title + .divide-md + section');
+    const $collection = [];
+
+    $sections.each(function () {
+      $collection.push($(this).height());
+    });
+
+    const $tallest = Math.max(...$collection);
+
+    $sections.each(function () {
+      $(this).height($tallest + 'px');
+    });
+  };
+
   window.addEventListener('resize', () => {
     updateMainFeatureImage();
     slickInit($('.broad-band-scroll-wrapper'), $('.broad-band-card'));
+    labelHeaderMatch();
   });
   window.onload = () => {
     updateMainFeatureImage();
   };
   slickInit($('.broad-band-scroll-wrapper'), $('.broad-band-card'));
+  labelHeaderMatch();
 });
