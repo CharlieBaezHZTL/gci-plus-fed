@@ -34,15 +34,23 @@ $textXL: $x2l;
   padding-bottom: 70px;
   margin-left: -$lgr;
   margin-right: -$lgr;
-  color: white;
 
-  &.bg-scale-light, .bg-scale-light{
-    color: $almostBlack;
+  &.bg-scale-light, .bg-scale-light, &.bg-white, .bg-white{
+    .sc-title,
+    .sc-subtitle,
+    .sc-legal {
+      color: $almostBlack;
+    }
     .slick-prev, .slick-next {
       svg{
         path {
           stroke: $almostBlack;
         }
+      }
+    }
+    .slick-dots {
+      li.slick-active button {
+        background-color: $almostBlack;
       }
     }
   }
@@ -100,12 +108,16 @@ $textXL: $x2l;
         margin: 0 $sm;
 
         &.slick-active button {
-          background-color: $almostBlack;
+          background-color: white;
         }
       }
     }
+  .sc-title,.sc-subtitle {
+    color: white;
+  }
   .sc-legal {
     margin-top: 40px;
+    color: white;
     a {
       color: inherit;
       font-family: $fontMedium;
