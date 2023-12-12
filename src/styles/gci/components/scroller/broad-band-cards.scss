@@ -23,6 +23,7 @@ $textLg: $lgr;
 $textXL: $x2l;
 
 
+
 .bg-scale-light {
   background-color: #F2F5FA;
 }
@@ -33,6 +34,18 @@ $textXL: $x2l;
   padding-bottom: 70px;
   margin-left: -$lgr;
   margin-right: -$lgr;
+  color: white;
+
+  &.bg-scale-light, .bg-scale-light{
+    color: $almostBlack;
+    .slick-prev, .slick-next {
+      svg{
+        path {
+          stroke: $almostBlack;
+        }
+      }
+    }
+  }
 
   .content-container {
     max-width: 1260px;
@@ -44,6 +57,7 @@ $textXL: $x2l;
     width: 100%;
     align-items: center;
     justify-content: center;
+  }
 
     .slick-prev, .slick-next,.slick-dots {
       position: relative;
@@ -58,6 +72,12 @@ $textXL: $x2l;
 
     .slick-prev, .slick-next {
       transform: none;
+      svg{
+        path {
+          stroke: white;
+        }
+      }
+      
       &.slick-disabled{
         svg{
           path {
@@ -84,7 +104,6 @@ $textXL: $x2l;
         }
       }
     }
-  }
   .sc-legal {
     margin-top: 40px;
     a {

@@ -61,9 +61,9 @@ $(document).ready(function () {
         appendArrows: $('.slick-navigation'),
         appendDots: $('.slick-navigation span'),
         prevArrow:
-          '<button type="button" class="slick-prev"><svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5161 3.88L4.48389 10L10.5161 16.12" stroke="#312E3B" stroke-width="5" stroke-linecap="square"/></svg></button>',
+          '<button type="button" class="slick-prev"><svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5161 3.88L4.48389 10L10.5161 16.12" stroke-width="5" stroke-linecap="square"/></svg></button>',
         nextArrow:
-          '<button type="button" class="slick-next"><svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.48386 16.12L10.5161 10L4.48385 3.88" stroke="#312E3B" stroke-width="5" stroke-linecap="square"/></svg></button>',
+          '<button type="button" class="slick-next"><svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.48386 16.12L10.5161 10L4.48385 3.88" stroke-width="5" stroke-linecap="square"/></svg></button>',
       });
       $carouselWrapper.css('opacity', '1');
     };
