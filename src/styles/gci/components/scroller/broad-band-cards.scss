@@ -58,6 +58,13 @@ $textXL: $x2l;
 
     .slick-prev, .slick-next {
       transform: none;
+      &.slick-disabled{
+        svg{
+          path {
+            stroke: #BBBDC0;
+          }
+        };
+      }
     }
 
     .slick-dots {
