@@ -13,7 +13,6 @@ $x3l: 30px;
 $x4l: 40px;
 $x5l: 48px;
 $fontRegular: "Gotham", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$fontMedium: "Gotham Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $fontBold: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $textXs: 12px;
 $textSm: 13px;
@@ -120,7 +119,7 @@ $textXL: $x2l;
     color: white;
     a {
       color: inherit;
-      font-family: $fontMedium;
+      font-family: $fontBold;
       text-decoration: underline;
     }
   }
@@ -185,7 +184,7 @@ $textXL: $x2l;
       text-transform: none;
       margin-bottom: $sm;
       > p{
-        font-family: $fontMedium;
+        font-family: $fontRegular;
       }
     } 
     .broad-band-card-section-title {
@@ -226,7 +225,7 @@ $textXL: $x2l;
       list-style: none;
       padding-inline-start: $lg;
       margin-bottom: $lg;
-      font-family: $fontMedium;
+      font-family: $fontBold;
       font-size: $textSm;
       .label-list{
         margin-bottom: 0;
@@ -241,13 +240,14 @@ $textXL: $x2l;
         margin-bottom: 0;
         display: flex;
         justify-content: space-between;
-        font-family: $fontMedium;
+        font-family: $fontBold;
         font-size: $textSm;
       }
       .label-list-item-detail{
         display: flex;
         justify-content: space-between;
         margin-bottom: 0;
+        font-family: $fontRegular;
         > a {
           margin-bottom: $ml;
         }
@@ -258,7 +258,7 @@ $textXL: $x2l;
       }
     }
     .font-md {
-      font-family: $fontMedium;
+      font-family: $fontBold;
     }
     a {
       color: $gciRed;
@@ -266,7 +266,7 @@ $textXL: $x2l;
       text-decoration: underline;
       text-decoration-color: $gciRed;
       display: inline-block;
-      font-family: $fontMedium;
+      font-family: $fontBold;
       font-size: $textSm;
       &:hover {
         color: $almostBlack;
@@ -299,7 +299,7 @@ $textXL: $x2l;
       }
     }
     .label-card-id{
-      font-family: $fontMedium;
+      font-family: $fontBold;
       font-size: $textXs;
     }
   }
