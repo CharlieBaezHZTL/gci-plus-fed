@@ -159,6 +159,8 @@ $textXL: $x2l;
   padding: $sm;
   background-color: white;
   height: 100%;
+  max-width: 636px;
+  margin: 0 auto;
   .content-container {
     padding: $ml;
     border: solid $almostBlack $sm;
@@ -191,17 +193,34 @@ $textXL: $x2l;
       justify-content: space-between;
       font-size: $textMd;
       margin-bottom: $sm;
+
+      &:only-child{
+        margin-bottom: $ml;
+      }
+      
       > .label-list-item-value {
         font-family: $fontBold;
         font-weight: bold;
+        margin-left: 15%;
+        a {
+          text-align: right;
+        }
       }
       .title-tag {
         font-size: $textSm;
+        margin-left: 15%;
       }
     } 
     p {
       font-size: $textSm;
-      margin-bottom: $sm;
+      margin-bottom: $lg;
+      &:last-of-type {
+        margin-bottom: $ml;
+
+      }
+      &:empty{
+        display: none;
+      }
     }
     .label-list {
       list-style: none;
@@ -225,14 +244,13 @@ $textXL: $x2l;
         font-family: $fontMedium;
         font-size: $textSm;
       }
-      .label-list-item-value {
-        font-family: $fontBold;
-        white-space: pre;
-      }
       .label-list-item-detail{
         display: flex;
         justify-content: space-between;
         margin-bottom: 0;
+        > a {
+          margin-bottom: $ml;
+        }
       }
       .label-list-item-value {
         font-family: $fontBold;
@@ -245,20 +263,23 @@ $textXL: $x2l;
     a {
       color: $gciRed;
       white-space: pre;
-      box-shadow: 0 $xxs 0 0 $gciRed;
+      text-decoration: underline;
+      text-decoration-color: $gciRed;
       display: inline-block;
-      line-height: .85;
       font-family: $fontMedium;
       font-size: $textSm;
       &:hover {
         color: $almostBlack;
+      }
+      &:last-child:not(:first-child){
+        margin-bottom: $ml;
       }
     }
     h4 + h4 {
       margin-top: 8px;
     }
     hr {
-      margin-top: $ml;
+      margin-top: 0;
       margin-bottom: $ml;
       &.divide-sm{
         border-top: solid $xxs $almostBlack;
@@ -271,6 +292,7 @@ $textXL: $x2l;
       }
       &.divide-xl{
         border-top: solid $md $almostBlack;
+        margin-top: $ml;
       }
       &.divide-spacer {
         border-top: none;
