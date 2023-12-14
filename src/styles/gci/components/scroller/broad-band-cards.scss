@@ -33,6 +33,7 @@ $textXL: $x2l;
   padding-bottom: 70px;
   margin-left: -$lgr;
   margin-right: -$lgr;
+  overflow-x: hidden;
 
   &.bg-scale-light, .bg-scale-light, &.bg-white, .bg-white{
     .sc-title,

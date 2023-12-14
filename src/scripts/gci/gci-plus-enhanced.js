@@ -39,6 +39,8 @@ $(document).ready(function () {
   /* ====
     BROAD BAND LABEL CAROUSEL
   ==== */
+  let prevWidth = window.innerWidth;
+
   const slickInit = ($carouselWrapper, $carouselItem) => {
     const maxTablet = window.matchMedia('(max-width: 1024px)');
     const minTablet = window.matchMedia('(min-width: 768px)');
@@ -46,6 +48,8 @@ $(document).ready(function () {
     const minMobile = window.matchMedia('(min-width: 0px)');
 
     const slickConfig = ($slidesCount) => {
+      console.log('change');
+
       if ($carouselWrapper.hasClass('slick-slider')) {
         $carouselWrapper.slick('unslick');
       }
@@ -55,7 +59,7 @@ $(document).ready(function () {
         slidesToScroll: $slidesCount,
         infinite: false,
         centerMode: false,
-        focusOnSelect: true,
+        focusOnSelect: false,
         arrows: true,
         dots: true,
         appendArrows: $('.slick-navigation'),
@@ -101,8 +105,11 @@ $(document).ready(function () {
 
   window.addEventListener('resize', () => {
     updateMainFeatureImage();
-    slickInit($('.broad-band-scroll-wrapper'), $('.broad-band-card'));
-    labelHeaderMatch();
+    if (prevWidth !== window.innerWidth) {
+      slickInit($('.broad-band-scroll-wrapper'), $('.broad-band-card'));
+      labelHeaderMatch();
+    }
+    prevWidth = window.innerWidth;
   });
   window.onload = () => {
     updateMainFeatureImage();
